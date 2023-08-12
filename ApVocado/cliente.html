@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Precios en Tiempo Real</title>
+</head>
+<body>
+    <!-- Título -->
+    <h1 id="tituloPrecio">Precio Actual del aguacate hoy: </h1>
+
+    <script>
+        // Crear una conexión WebSocket con la dirección del servidor
+        const socket = new WebSocket("ws://localhost:8080/servidor.html"); // Usar la misma dirección y puerto que en la página del servidor
+
+        // Manejar el evento cuando la conexión WebSocket se abre
+        socket.onopen = function(event) {
+            console.log("Conexión WebSocket abierta");
+        };
+
+        // Manejar el evento cuando se recibe un mensaje WebSocket
+        socket.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            if (data.precio) {
+                const tituloPrecio = document.getElementById("tituloPrecio");
+                tituloPrecio.innerHTML = `Precio Actual del aguacate hoy: $${data.precio}`;
+            }
+        };
+
+        // Manejar el evento cuando la conexión WebSocket se cierra
+        socket.onclose = function(event) {
+            console.log("Conexión WebSocket cerrada");
+        };
+
+        // Manejar el evento cuando hay un error en la conexión WebSocket
+        socket.onerror = function(event) {
+            console.error("Error en la conexión WebSocket");
+        };
+    </script>
+</body>
+</html>
+
+
+        // Manejar el evento cuando hay un error en la conexión WebSocket
+        socket.onerror = function(event) {
+            console.error("Error en la conexión WebSocket");
+        };
+    </script>
+</body>
+</html>

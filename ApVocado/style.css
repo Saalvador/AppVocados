@@ -1,0 +1,213 @@
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-wrap: nowrap; /* Evita el ajuste de línea */
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2em;
+  background-color: #85bb65;
+}
+
+/* Informacion de Datos */
+#precioDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFF;
+  width: 15em;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#ultimoPrecio {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  color: #85bb65;
+}
+
+/* Grafic & Prices */
+#Prices {
+  display: flex;
+  flex-wrap: nowrap; /* Evita el ajuste de línea */
+  flex-grow: 1;
+  gap: 0; /* Eliminar espacio entre elementos */
+}
+
+/* Grafic */
+#Grafic {
+  flex-grow: 1;
+  min-width: 5em;
+  max-width: 70em;
+  min-height: auto;
+  max-height: auto;
+  border: solid .1em;
+  background-color: rgba(0, 0, 0, 0.79);
+  border-color: rgba(0, 0, 0, 0.79);
+}
+
+/* Butttons Conteiner */
+#ButtonContainer {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-color: rgba(0, 0, 0, 0.85);
+  padding-right: 1em;
+  border-top-left-radius: 4em;
+  border-bottom-left-radius: 4em;
+}
+
+/* Button List Only */
+#ButtonList {
+  list-style-type: none;
+  margin-left: .5em;
+}
+
+#ButtonList li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+/* Buttons Inside */
+#ButtonList li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10em;
+  height: 2em;
+  border-top-left-radius: 4em;
+  border-bottom-left-radius: 4em;
+  background-color: #85bb65;
+  border: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease-out;
+}
+
+/* Aumentamos ligeramente el tamaño del botón en estado hover */
+
+#formsell:hover,
+#reset:hover,
+#buscar:hover,
+.buscador:hover {
+  transform: scale(1.01);
+    box-shadow: 0 0 0 .1em #1ac73c; /* Agrega un borde verde al pasar el cursor */
+}
+
+
+/* Search Container of header*/
+.buscador {
+  background-color: #fff;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Search */
+#src {
+  height: 2.5em;
+  width: 15em;
+  border-radius: 1em;
+  font-family: arial;
+  border: 0;
+}
+
+/* Search enter Button*/
+#buscar {
+  background-color:#1ac73c;
+  color: #fff;
+  height: 2em;
+  border-color: #1ac73c;
+  border-radius: 1em;
+  justify-content: left;
+  font-family: arial;
+  border: solid 2px;
+  margin-left: .5em;
+}
+
+/* Search Text */
+#src:focus {
+  outline: 0;
+}
+
+/* Button Reset Search */
+#reset {
+  border: 0;
+  margin: auto;
+  font-size: 1.3em;
+  background-color: #fff;
+  border-radius: 1em;
+  font-family: arial;
+  color: #9b9b9b;
+}
+
+#reset:hover {
+  color: #808080;
+}
+
+/* Button Sell Avocados */
+#formsell {
+  width: 50%;
+  color: #000;
+  background-color: #85bb65;
+  border: none;
+  padding: .1em;
+}
+
+
+/* ... CSS For list for information page ...*/
+.containerTypeInfo {
+  background-color: #000;
+  margin: 4em;
+  padding: 2em;
+}
+
+/* Add sticky footer styles */
+html {
+  height: 100%;
+}
+
+
+#newsSection{border: solid 3px white;
+}
+
+#adBanner{border: solid 5px red;
+
+}
+
+/* News & Publicidad container*/
+.content-container {
+  margin:  1em;
+  display: flex; /* Use Flexbox to make the elements inside it display side by side */
+}
+
+#newsSection {
+  flex: 1; /* Make the news section take up the available space */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+#adBanner {
+  flex: 0 0 300px; /* Make the ad banner have a fixed width of 300px, and don't allow it to grow or shrink */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+/* links and Hover*/
+
+a:visited{}
+a:hover{}
+a:active {}
+header {}
+
+/* Css For mihuerto.htm formulario de registro de huertas */
+
+#huertasForm {
+  width: min-content;
+  background-color: #000;
+  padding: 2em;
+}
+
+#huertasRegistradas{
+  margin: 2em;
+}

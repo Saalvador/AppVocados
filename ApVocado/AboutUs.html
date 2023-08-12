@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pestañas</title>
+  <style>
+    /* Estilos generales para el cuerpo de la página */
+    body {
+      font-family: Arial, sans-serif;
+     
+      background-color:  #85bb65;
+    }
+
+    .Info-Terms {
+      display: flex;
+    }
+
+
+    /* Estilos para el contenedor de las pestañas */
+    .tabs-container {
+      display: flex;
+      flex-direction: column; /* Las pestañas se apilan verticalmente */
+      width: 200px; /* Ancho del contenedor de pestañas */
+      border-right: 1px solid #ddd; /* Borde derecho para separar las pestañas del contenido */
+      background-color: #f2f2f2; /* Color de fondo para el contenedor de pestañas */
+      margin: 4em;
+      margin-top: 2em;
+    }
+    /* Estilos para los botones de las pestañas */
+    .tab-button {
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd; /* Borde inferior para separar los botones */
+      cursor: pointer;
+    }
+    .tab-button.active {
+      background-color: #ddd; /* Color de fondo cuando la pestaña está activa */
+    }
+    /* Estilos para el contenido de las pestañas */
+    .tab-content {
+      display: none; /* Ocultar contenido por defecto */
+      padding: 20px;
+      width: calc(100% - 2em); /* Ancho del contenido, restando el ancho de las pestañas */
+    }
+
+    .tab-content.active {
+      display: block; /* Mostrar contenido cuando la pestaña está activa */
+    }
+
+
+    .link {
+    color: #000;
+    font-family: arial;
+  }  
+  
+  
+  /* Logo & AppVocado */
+  #appvocado {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  /* Logo.gif */
+  img {
+    height: auto;
+    width: auto;
+    max-height: 5em;
+    max-width: 4em;
+    padding: 0;
+    margin: 0;
+  }
+  /* Logo Container */
+  .icon {
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+
+</head>
+<body>
+  <!-- Header icon & Appvocado -->
+
+
+  <!-- Contenedor de las pestañas -->
+
+  <div class="Info-Terms">
+  <div class="tabs-container">
+
+     <!-- Header icon & Appvocado -->
+    <div id="appvocado">
+      <figure class="icon">
+          <a href="index.html">
+          <img src="img/avocado-1-icon.gif" title="Click para ir a página de inicio" alt="Inicio">
+          </a>
+      </figure>
+      <a id="AppVocado" href="" class="link"> AppVocado </a>
+
+  </div>
+    <div class="tab-button" onclick="showTab('aboutUs')">Acerca de Nosotros</div>
+    <div class="tab-button" onclick="showTab('terms')">Términos de Servicio</div>
+    <div class="tab-button" onclick="showTab('privacy')">Política de Privacidad</div>
+    <div class="tab-button" onclick="showTab('contact')">Contacto</div>
+    <div class="tab-button" onclick="showTab('questions')">Preguntas Frecuentes</div>
+  </div>
+
+  <!-- Contenido de las pestañas -->
+  <div class="tab-content" id="aboutUs">
+    <h2>Acerca de Nosotros</h2>
+    <p>Texto descriptivo sobre tu empresa u organización.</p>
+  </div>
+
+  <div class="tab-content" id="terms">
+    <h2>Términos de Servicio</h2>
+    <p>Aquí puedes colocar tus términos y condiciones.</p>
+  </div>
+
+  <div class="tab-content" id="privacy">
+    <h2>Política de Privacidad</h2>
+    <p>Información sobre cómo manejas los datos personales.</p>
+  </div>
+
+  <div class="tab-content" id="contact">
+    <h2>Contacto</h2>
+    <p>Formulario de contacto o información de contacto.</p>
+  </div>
+
+  <div class="tab-content" id="questions">
+    <h2>Preguntas Frecuentes</h2>
+    <p>Respuestas a preguntas comunes que los usuarios puedan tener.</p>
+  </div>
+  </div>
+
+  <!-- Script para manejar el cambio de pestañas -->
+  <script>
+    function showTab(tabId) {
+      // Oculta todos los contenidos de pestañas
+      var tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(function(content) {
+        content.classList.remove('active');
+      });
+
+      // Muestra el contenido de la pestaña seleccionada
+      var selectedTab = document.getElementById(tabId);
+      selectedTab.classList.add('active');
+
+      // Resalta el botón de la pestaña seleccionada
+      var tabButtons = document.querySelectorAll('.tab-button');
+      tabButtons.forEach(function(button) {
+        button.classList.remove('active');
+      });
+      var selectedButton = document.querySelector('[onclick="showTab(\'' + tabId + '\')"]');
+      selectedButton.classList.add('active');
+    }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function showTabFromHash() {
+        var hash = window.location.hash.substr(1);
+        if (hash) {
+          showTab(hash);
+        }
+      }
+  
+      showTabFromHash();
+  
+      window.addEventListener("hashchange", showTabFromHash);
+    });
+  </script>
+  
+  
+</body>
+</html>
+
