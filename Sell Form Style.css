@@ -1,0 +1,208 @@
+/* conteiner enter form */
+.container {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.5em;
+  padding-top: auto;
+}
+
+/* Enter form */
+#form {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  background-color: #85bb65;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* Centrar horizontalmente */
+  padding: 3em;
+}
+
+/* Price real time */
+.price {
+  font-family: Arial;
+  gap: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+}
+
+h1 {
+  color: #1ac73c;
+  font-family: Arial;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  color: #fff;
+  font-family: Arial;
+  font-size: 200%;
+}
+
+h3 {
+  color: #fff;
+  font-family: Arial;
+}
+
+/* enter form @mail & password */
+.enterform{
+  display: flex;
+  flex-flow: column;
+  margin: 2em;
+  gap: 2em;
+}
+
+.passwordforget {
+  color: #fff;
+}
+
+#registerform{
+}
+
+
+/*  container new user form register inputs containers*/
+.containernewuserform {
+  display: none;
+}
+
+.containerdates {
+  margin-bottom: 1em;
+}
+
+.containerdates .input-row,
+.containernewuserform .input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 1em;
+}
+
+.containerdates .input-row .input-label,
+.containernewuserform .input-row .input-label {
+  width: 110%;
+}
+
+.containerdates .input-row .input,
+.containernewuserform .input-row .input {
+ 
+  flex: 1;
+}
+
+
+.passwordforget:hover{
+  text-decoration: underline; /* Subraya el texto al pasar el cursor */
+  text-decoration-color: #1ac73c;
+}
+
+.input:focus {
+outline-color: #1ac73c;
+}
+
+/* body */
+body {
+  background-color: #000;
+  margin: 0;
+}
+
+.checkbox-container {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   padding-top: 0;
+   padding-bottom: 1em;
+}
+
+.labelcheckbox{
+  color: #1ac73c;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+input[type="radio"] {
+  /* Ocultar el checkbox nativo */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 2em;
+  height: 2em;
+  border: 1em solid #fff;
+  border-radius: 20%;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Estilo para el checkbox cuando está seleccionado */
+input[type="radio"]:checked {
+  background-color: #85bb65;
+  border-color: #85bb65;
+  transform: scale(1.09); /* Hace que el botón crezca un 10% */
+}
+
+p.titles {
+  /* ejemplo: formulario con exito */
+  font-size: 250%; /* Cambiar el tamaño de la fuente a 24px */
+  text-align: center; /* Centrar el texto en el elemento */
+}
+
+/*Tooltip Alert*/
+.containernewuserform {
+    position: relative;
+  }
+
+  /* Estilo del tooltip personalizado */
+  .custom-tooltip {
+    position: absolute;
+    top: 50%; /* Ajustamos la posición vertical del tooltip al centro */
+    left: 100%; /* Ubicación a la derecha del campo de entrada */
+    transform: translate(5px, -50%); /* Ajustamos la posición exacta para centrar verticalmente */
+    background-color: #333;
+    color: #85bb65;
+    font-size: 14px; /* Tamaño de fuente deseado */
+    padding: 5px;
+    border-radius: 4px;
+    display: none;
+  }
+
+  /* Mostrar el tooltip personalizado cuando el cursor está sobre el elemento */
+  .containernewuserform:hover .custom-tooltip {
+    display: block;
+  }
+
+#termsModal {display: none;}
+
+p {color: #1ac73c;}
+
+ /* ... (previous CSS styles) ... */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Adjust the width as desired */
+  overflow-y: auto; /* Add a scrollbar for the content */
+}
+
+.modal-content {
+  /* ... (previous modal content styles) ... */
+}
+
+.terms-scrollable {
+  max-height: 200px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Add a scrollbar for the terms and conditions */
+}
+
+
+/* ... (remaining CSS styles) ... */

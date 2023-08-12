@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidor de Actualización de Precios</title>
+</head>
+<body>
+    <h1>Servidor de Actualización de Precios</h1>
+    <input type="text" id="precioInput" placeholder="Ingrese un precio">
+    <button onclick="enviarPrecio()">Enviar Precio</button>
+
+    <script>
+        // Crear una conexión WebSocket con la dirección del servidor
+        const socket = new WebSocket("ws://localhost:8080/server.html"); // Usar una dirección y puerto que desees
+
+        // Función para enviar un precio a través del WebSocket
+        function enviarPrecio() {
+            const precioInput = document.getElementById("precioInput");
+            const precio = parseFloat(precioInput.value);
+
+            if (!isNaN(precio)) {
+                // Enviar el precio como un objeto JSON
+                socket.send(JSON.stringify({ precio }));
+                precioInput.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
