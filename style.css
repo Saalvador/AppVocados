@@ -39,7 +39,7 @@
 /* Grafic */
 #Grafic {
   flex-grow: 1;
-  min-width: 5em;
+  min-width: 70em;
   max-width: 70em;
   min-height: auto;
   max-height: auto;
