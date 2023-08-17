@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AppVocado</title>
+	<meta name="autor" content="Salvador Angel">
+    <meta name="copyrigth" content="Appvocado.org">
+	  <link rel="icon" type="image/gif" href="img/avocado-1-icon.gif">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+	  <script src="scripts.js"></script>
+	  <script src="server.js"></script>
+	  <script src="header.js"></script>
+	  <script src="footer.js"></script>
+	  <script src="scriptsForForm.js"></script>
+	  <script src="scriptsForSounds.js"></script>
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9150135786534340"
+     crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="style.css">
+	  <link rel="stylesheet" href="styleForComun.css">
+</head>
+
+<body>
+<!-- Header -->
+	  <header>
+		<!-- Llama a la función mostrarHeader() para mostrar el header -->
+		<script>
+			mostrarHeader();
+		</script>
+	  </header>
+
+<!-- Tiltulo -->
+	  <h1 id="tituloPrecio">Presio Actual del aguacate hoy: </h1>
+
+<!-- Prices Container -->
+<div id="Prices">
+  <div id="ButtonContainer">
+    <ul id="ButtonList">
+		<li><button id="btnDiario" onclick="playSound('Sounds/Grafic.mp3')">1 día</button></li>
+		<li><button id="btnSemanal" onclick="playSound('Sounds/Grafic.mp3')">1 semana</button></li>
+		<li><button id="btnMensual" onclick="playSound('Sounds/Grafic.mp3')">1 mes</button></li>
+		<li><button id="btnAnual" onclick="playSound('Sounds/Grafic.mp3')">1 año</button></li>
+        <li><button id="btnHistorico" onclick="playSound('Sounds/Grafic.mp3')">Todo</button></li>
+    </ul>
+  </div>
+
+<!-- Grafic Container -->
+  <div id="Grafic">
+    <canvas id="grafico"></canvas>
+    </div>
+
+<div id="precioDiv">
+  <p>Precio actual del aguacate hoy:
+    <span id="ultimoPrecio"></span>
+  </p>
+
+  <div id="venderContainer">
+	<button class="button blink"  id="venderButton" onclick="playSound('Sounds/Moneda-Retro.mp3'); mostrarFormulario()">Vender</button>
+  </div>
+
+</div>
+</div>
+
+<!-- News Seccion -->
+<div class="content-container">
+<section id="newsSection">
+	<h2>Seccion de Noticias</h2>
+	<!-- Add your news content here -->
+	<!-- You can use <article>, <div>, or other appropriate elements to structure your news items -->
+</section>
+
+<!-- Banner for Advertising $$$ -->
+<aside id="adBanner">Seccion de publicidad
+	<!-- Add your advertisement banner content here -->
+	<!-- You can use an <img> tag to display the banner image or other elements as needed -->
+</aside>
+</div>
+
+<!-- Footer -->
+
+<footer>
+	<div id="footer-container"></div>
+</footer>	 
+</body>
+</html>
